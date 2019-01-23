@@ -1,0 +1,22 @@
+{
+  "name": "educate",
+  "version": "0.1.0",
+  "description": "Content Management System for education",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jagyas/educate.git"
+  },
+  "keywords": [
+    "cms"
+  ],
+  "author": "Jagdeep Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jagyas/educate/issues"
+  },
+  "homepage": "https://github.com/jagyas/educate#readme"
+}
