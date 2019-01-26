@@ -8,14 +8,14 @@
     "start": "ng serve --host 0.0.0.0",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint ng-universal-demo",
+    "lint": "ng lint my-app",
     "e2e": "ng e2e",
-    "build:client-and-server-bundles": "ng build --prod && ng run ng-universal-demo:server:production",
+    "build:client-and-server-bundles": "ng build --prod && ng run my-app:server:production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run generate:prerender",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "compile:server": "tsc -p server.tsconfig.json",
     "generate:prerender": "cd dist && node prerender",
-    "serve:prerendergit a": "cd dist/browser && http-server",
+    "serve:prerender": "cd dist/browser && http-server",
     "serve:ssr": "node dist/server"
   },
   "repository": {
