@@ -20,7 +20,7 @@ import { environment } from '../environments/environment';
   ],
   imports: [
     BrowserModule,
-    BrowserModule.withServerTransition({appId: 'my-app'}),
+    BrowserModule.withServerTransition({appId: 'educate'}),
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -32,7 +32,7 @@ import { environment } from '../environments/environment';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

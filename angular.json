@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "educate": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,16 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-app",
+            "outputPath": "dist/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "polyfills": "src/polyfills.ts",
-            
+            "polyfills": "src/polyfills.ts",        
             "assets": [
-	      "src/favicon.ico",
-              "src/assets",
-              "src/manifest.json",
+	        "src/favicon.ico",
+            "src/assets",
+            "src/manifest.json",
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -68,31 +67,25 @@
                   "maximumError": "5mb"
                 }
 	      ],
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "serviceWorker": true
+            "serviceWorker": true
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "educate:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-app:build:production"
+              "browserTarget": "educate:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "educate:build"
           }
         },
         "test": {
@@ -156,7 +149,7 @@
         }
       }
     },
-    "my-app-e2e": {
+    "educate-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -167,11 +160,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-app:serve"
+            "devServerTarget": "educate:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-app:serve:production"
+              "devServerTarget": "educate:serve:production"
             }
           }
         },
@@ -187,7 +180,7 @@
       }
     }
   },
-  "defaultProject": "my-app",
+  "defaultProject": "educate",
   "cli": {},
   "schematics": {
     "@schematics/angular:class": {
