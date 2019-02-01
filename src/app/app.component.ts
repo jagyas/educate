@@ -1,26 +1,12 @@
-import { Component, OnInit } from  '@angular/core';
+import { Component, OnInit, OnDestroy } from  '@angular/core';
 import { ApiService } from  './api.service';
 import { Item } from  './api.service';
+import { Subscription } from 'rxjs';
+import { RouterModule, Routes, ActivatedRoute } from '@angular/router'
 
 @Component({
-  selector: 'app-root',
+  selector: 'educate',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  title  =  'pwademo';
-items:  Array<Item>;
-constructor(private  apiService:  ApiService){
-}
-ngOnInit(){
-this.fetchData();
-}
-fetchData(){
-this.apiService.fetch().subscribe((data:  Array<Item>)=>{
-console.log(data);
-this.items  =  data;
-}, (err)=>{
-console.log(err);
-});
-}
-}
+export class AppComponent  {}
