@@ -16,7 +16,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     if (isPlatformServer(this.platformId) && req.url.includes('./')) {
       return next.handle(req.clone({
-        url: `http://node14.codenvy.io:4200/${req.url.replace('./', '')}`
+        url: `http://localhost:4200/${req.url.replace('./', '')}`
       }));
     }
 
