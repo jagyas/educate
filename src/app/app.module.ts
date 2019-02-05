@@ -11,9 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
-import { AppModule2 } from './app2.module';
-import { AppModule3 } from './app3.module';
+import { StoriesModule } from './stories/stories.module';
+import { HomepageModule } from './homepage/homepage.module'
 
 
 
@@ -30,12 +29,10 @@ import { CommonModule } from '@angular/common';
     BrowserModule.withServerTransition({appId: 'educate'}),
     BrowserAnimationsModule,
     HttpClientModule,
-    AppModule2,
-    AppModule3,
+    HomepageModule,
+    StoriesModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent, pathMatch: 'full'},
-      { path: 'lazy', loadChildren: './lazy/lazy.module#LazyModule'},
-      { path: 'lazy/nested', loadChildren: './lazy/lazy.module#LazyModule'}
+      { path: '', redirectTo:'home', pathMatch: 'full'}
     ]),
     MarkdownModule.forRoot({
   loader: HttpClient, // optional, only if you use [src] attribute
