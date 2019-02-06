@@ -11,8 +11,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { StoriesModule } from './stories/stories.module';
-import { HomepageModule } from './homepage/homepage.module'
+
+import { HomepageModule } from './homepage/homepage.module';
+import { StoriesRoutingModule } from './stories/stories-routing.module';
 
 
 
@@ -30,7 +31,7 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     HttpClientModule,
     HomepageModule,
-    StoriesModule,
+    StoriesRoutingModule,
     RouterModule.forRoot([
       { path: '', redirectTo:'home', pathMatch: 'full'}
     ]),

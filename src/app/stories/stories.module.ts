@@ -2,17 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StoriesRoutingModule } from './stories-routing.module';
-import { StoriesComponent } from './stories.component';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+
+
 
 @NgModule({
-  declarations: [StoriesComponent],
+  declarations: [],
   imports: [
     CommonModule,
-    StoriesRoutingModule,
-    MarkdownModule.forChild()
+    StoriesRoutingModule
   ],
-  exports: [StoriesComponent],
-  entryComponents: [StoriesComponent]
+  exports: [StoriesRoutingModule],
+  entryComponents: []
 })
 export class StoriesModule { }
