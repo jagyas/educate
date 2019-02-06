@@ -10,23 +10,19 @@ import { ActivatedRoute } from '@angular/router';
 export class StoriesComponent implements OnInit, OnDestroy {
 
  private sub: Subscription;
+ post: string;
+ constructor(private route: ActivatedRoute) { }
 
-  post: string;
-
-  constructor(private route: ActivatedRoute) {
-
-  }
-
-  ngOnInit() {
+ ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.post = './assets/blog/post/' +  params['id'] + '.md';
     });
-  }
+ }
 
-  ngOnDestroy() {
+ ngOnDestroy() {
     if (this.sub) {
       this.sub.unsubscribe();
     }
-  }
+ }
 
 }

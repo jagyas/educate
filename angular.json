@@ -23,9 +23,9 @@
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",        
             "assets": [
-	        "src/favicon.ico",
-            "src/assets",
-            "src/manifest.json",
+	            "src/favicon.ico",
+              "src/assets",
+              "src/manifest.json",
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -69,13 +69,13 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-	      "budgets": [
+	         "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-	      ],
+	          ],
             "serviceWorker": true
             }
           }
@@ -119,7 +119,7 @@
             "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js"
             ],
             "assets": [
-	      "src/favicon.ico",
+	            "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
               {
