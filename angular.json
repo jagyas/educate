@@ -32,6 +32,11 @@
                 "output": "/assets"
               },
               {
+                "glob": "**/*",
+                "input": "src/admin",
+                "output": "/admin"
+              },
+              {
                 "glob": "favicon.ico",
                 "input": "src",
                 "output": "/"
