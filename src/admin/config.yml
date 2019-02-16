@@ -2,7 +2,7 @@ backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
   repo: jagyas/educate
-  base_url: http://node18.codenvy.io:44577
+  base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com/prod/
 media_folder: "src/assets/images"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
