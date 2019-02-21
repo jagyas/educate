@@ -7,10 +7,13 @@ cache:
 install:
     - yarn install
     - yarn run build:prerender
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_API_KEY  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  on:
-    branch: master
+after_success: |
+    cd public
+    git add .
+    git status
+    git commit -m 'Site push'
+    git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
+ 
+branches:
+  only:
+  - master
