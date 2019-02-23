@@ -13,7 +13,7 @@ after_success: |
     mkdir backup
     cd backup
     git clone https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/backup.git .
-    rm -rf .
+    rm -rf *
     git add .
     git commit -m"Removed old backup"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/backup.git master
@@ -26,7 +26,7 @@ after_success: |
     mkdir educate
     cd educate
     git clone https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io .
-    rm -rf .
+    rm -rf *
     echo "Please wait upgrading. Refresh after few minutes" > index.html
     git add .
     git commit -m"Removed old Educate version"
