@@ -11,10 +11,11 @@ script: echo "npm test temporarily disabled"
 after_success: |
     cd dist/browser
     git init
+    git remote add origin https://github.com/jagyas/jagyas.github.io
+    git pull https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
     git add .
     git status
     git commit -m 'Site push'
-    git remote add origin https://github.com/jagyas/jagyas.github.io
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
  
 branches:
