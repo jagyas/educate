@@ -7,7 +7,7 @@ cache:
 install:
     - yarn install
     - yarn run build:prerender
-    - echo "skipping tests"
+script: echo "npm test temporarily disabled"
 after_success: |
     cd dist/browser
     git add .
