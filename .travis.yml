@@ -8,7 +8,7 @@ install:
     - yarn install
     - yarn run build:prerender
 after_success: |
-    cd public
+    cd dist/browser
     git add .
     git status
     git commit -m 'Site push'
