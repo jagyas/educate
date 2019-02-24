@@ -17,8 +17,12 @@ after_success: |
     git add .
     git commit -m"Removed old backup"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/backup.git master
+    cd ..
+    mkdir new_clone
+    cd new_clone
     git clone https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io .
-    git remote add origin https://github.com/jagyas/backup.git
+    cp -rf * ../backup
+    cd ../backup
     git add .
     git commit -m"New backup commit"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/backup.git master
@@ -32,7 +36,7 @@ after_success: |
     git commit -m"Removed old Educate version"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
     cd ..
-    cp -rf . educate
+    cp -rf * educate
     cd educate
     git add .
     git commit -m"Committed new Educate version"
