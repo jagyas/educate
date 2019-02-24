@@ -22,7 +22,7 @@ after_success: |
     mkdir new_clone
     cd new_clone
     git clone https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io .
-    rsync -av --exclude='.git' . ../backup
+    rsync -av --exclude='.git' --exclude='backup' --exclude='new_clone' --exclude='educate' . ../backup/
     cd ../backup
     git add .
     git commit -m"New backup commit"
@@ -39,10 +39,10 @@ after_success: |
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
     echo "Old educate version removed"
     cd ..
-    rsync -av --exclude='educate' --exclude='new_clone' --exclude='educate' . educate
+    rsync -av --exclude='backup' --exclude='new_clone' --exclude='educate' . educate
     cd educate
     git add .
-    git commit -m"Committed new Educate version"
+    git commit -m "Committed new Educate version"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
     echo "New educate version committed"
  
