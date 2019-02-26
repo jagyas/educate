@@ -4,8 +4,6 @@ backend:
   repo: jagyas/educate
   base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /prod/auth
-site_id: https://jagyas.github.io
-site_url: https://jagyas.github.io
 media_folder: "src/assets/images/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
