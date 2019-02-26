@@ -4,8 +4,9 @@ backend:
   repo: jagyas/educate
   base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /prod/auth
-site_id: node25.codenvy.io:43388
-media_folder: "src/assets/images"
+site_id: jagyas.github.io
+site_url: http://jagyas.github.io
+media_folder: "src/assets/images/uploads"
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
