@@ -2,6 +2,7 @@ backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
   repo: jagyas/educate
+  site_domain: jagyas.github.io
   base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /prod/auth
 publish_mode: editorial_workflow
