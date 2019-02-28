@@ -2,10 +2,9 @@ backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
   repo: jagyas/educate
-  site_domain: jagyas.github.io
-  api_root: https://api.github.com
   base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /prod/auth
+site_id: jagyas.github.io
 publish_mode: editorial_workflow
 media_folder: "src/assets/images/uploads"
 collections:
