@@ -34,6 +34,7 @@ after_success: |
     git clone https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io .
     rm -rf *
     echo "Please wait upgrading. Refresh after few minutes" > index.html
+    echo "dig2logic.com" > CNAME
     git add .
     git commit -m"Removed old Educate version"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
@@ -41,6 +42,7 @@ after_success: |
     cd ..
     rsync -av --exclude='backup' --exclude='new_clone' --exclude='educate' . educate
     cd educate
+    echo "dig2logic.com" > CNAME
     git add .
     git commit -m "Committed new Educate version"
     git push https://$GITHUB_USER:$GITHUB_API_KEY@github.com/jagyas/jagyas.github.io master
