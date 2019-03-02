@@ -4,7 +4,7 @@ backend:
   repo: jagyas/educate
   base_url: https://g47qtlv86f.execute-api.us-east-1.amazonaws.com
   auth_endpoint: /prod/auth
-site_id: jagyas.github.io
+site_id: https://jagyas.github.io
 publish_mode: editorial_workflow
 media_folder: "src/assets/images/uploads"
 collections:
