@@ -2,7 +2,7 @@ backend:
   name: github
   branch: master # Branch to update (optional; defaults to master)
   repo: jagyas/educate
-  base_url: http://node12.codenvy.io:43835/callback
+  base_url: http://node12.codenvy.io:43835
 site_id: dig2logic.com
 publish_mode: editorial_workflow
 media_folder: "src/assets/images/uploads"
