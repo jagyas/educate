@@ -65,6 +65,7 @@ collections:
     label_singular: 'Wiki' # Used in the UI, ie: "New Wiki"
     description: >
       A collection of Wikis.
+    folder: "src/assets/blog/wikis"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
