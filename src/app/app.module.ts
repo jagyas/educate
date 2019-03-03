@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomepageModule } from './homepage/homepage.module';
 import { StoriesRoutingModule } from './stories/stories-routing.module';
+import { HomepageComponent } from './homepage/homepage.component';
 
 
 @NgModule({
@@ -28,10 +29,9 @@ import { StoriesRoutingModule } from './stories/stories-routing.module';
     BrowserModule.withServerTransition({appId: 'educate'}),
     BrowserAnimationsModule,
     HttpClientModule,
-    HomepageModule,
     StoriesRoutingModule,
     RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full'}
+      { path: '', component: HomepageComponent }
     ]),
     MarkdownModule.forRoot({
       loader: HttpClient, // optional, only if you use [src] attribute
