@@ -8,6 +8,31 @@ site_id: dig2logic.com
 publish_mode: editorial_workflow
 media_folder: "src/assets/images/uploads"
 collections:
+  - name: "menus" # Used in routes, e.g., /admin/collections/menus
+    label: "Menus" # Used in the UI
+    label_singular: 'Menu' # Used in the UI, ie: "New Menu"
+    description: >
+      A collection of Menus.
+    folder: "src/assets/blog/menus" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string", tagname: 'h1' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        tagname: ''
+      - {label: "Body", name: "body", widget: "markdown"}
+      
   - name: "posts" # Used in routes, e.g., /admin/collections/posts
     label: "Posts" # Used in the UI
     label_singular: 'Post' # Used in the UI, ie: "New Post"
@@ -17,8 +42,65 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Title", name: "title", widget: "string", tagname: 'h1' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        tagname: ''
       - {label: "Body", name: "body", widget: "markdown"}
+    meta:
+      - { label: 'SEO Description', name: 'description', widget: 'text' }
+    
+  - name: 'wikis' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Wikis' # Used in the UI
+    label_singular: 'Wiki' # Used in the UI, ie: "New Wiki"
+    description: >
+      A collection of Wikis.
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Answer', name: 'body', widget: 'markdown' }
+
+  - name: 'settings'
+    label: 'Settings'
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: 'general'
+        label: 'Site Settings'
+        file: 'src/assets/blog/settings.json'
+        description: 'General Site Settings'
+        fields:
+          - { label: 'Global title', name: 'site_title', widget: 'string' }
+          - label: 'Post Settings'
+            name: posts
+            widget: 'object'
+            fields:
+              - { label: 'Number of posts on frontpage', name: front_limit, widget: number }
+              - { label: 'Default Author', name: author, widget: string }
+              - { label: 'Default Thumbnail', name: thumb, widget: image, class: 'thumb', required: false }
+
+      - name: 'authors'
+        label: 'Authors'
+        file: 'src/assets/blog/authors.yml'
+        description: 'Author descriptions'
+        fields:
+          - name: authors
+            label: Authors
+            label_singular: 'Author'
+            widget: list
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string', hint: 'First and Last' }
+              - { label: 'Description', name: 'description', widget: 'markdown' }
   
   
