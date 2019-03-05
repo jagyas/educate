@@ -29,6 +29,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     BrowserModule.withServerTransition({appId: 'educate'}),
     BrowserAnimationsModule,
     HttpClientModule,
+    HomepageModule,
     StoriesRoutingModule,
     RouterModule.forRoot([
       { path: '', component: HomepageComponent }
