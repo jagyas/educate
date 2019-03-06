@@ -1,8 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
+//import { MockBrowser } from 'mock-browser';
+
+//const MockBrowser = require('mock-browser').mocks.MockBrowser;
+//const mock = new MockBrowser();
+//global['navigator'] = mock.getNavigator();
 
 declare var browser:any;
 declare var breakpoints:any;
+declare var navigator:any;
 import '../../assets/js/breakpoints.min.js';
 import '../../assets/js/browser.min.js';
 import '../../assets/js/util.js';
