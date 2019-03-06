@@ -16,9 +16,9 @@ declare var $:any;
   templateUrl: './homepage.component.html',
   styles: []
 })
-export class HomepageComponent  implements AfterViewInit {
+export class HomepageComponent  implements OnInit {
     
-     ngAfterViewInit() {
+     ngOnInit() {
     console.log('AfterViewInit');
     $(".button").click( function() {
     alert("Your book is overdue.");
