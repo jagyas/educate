@@ -1,98 +1,96 @@
----
-title: Homepage
----
-`<article>
 
-   <a href="#" class="image"><img src="assets/images/pic01.jpg" alt="" ></a>
+&lt;article&gt;
 
-    <h3>Interdum aenean</h3>
+   &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic01.jpg" alt="" &gt;&lt;/a&gt;
 
-   <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Interdum aenean&lt;/h3&gt;
 
-    <ul class="actions">
+   &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>
+    &lt;/ul&gt;
 
-    <article>
+    &lt;/article&gt;
 
-    <a href="#" class="image"><img src="assets/images/pic02.jpg" alt="" ></a>
+    &lt;article&gt;
 
-    <h3>Nulla amet dolore</h3>
+    &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic02.jpg" alt="" &gt;&lt;/a&gt;
 
-    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Nulla amet dolore&lt;/h3&gt;
 
-    <ul class="actions">
+    &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>
+    &lt;/ul&gt;
 
-    <article>
+    &lt;/article&gt;
 
-    <a href="#" class="image"><img src="assets/images/pic03.jpg" alt="" ></a>
+    &lt;article&gt;
 
-    <h3>Tempus ullamcorper</h3>
+    &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic03.jpg" alt="" &gt;&lt;/a&gt;
 
-    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Tempus ullamcorper&lt;/h3&gt;
 
-    <ul class="actions">
+    &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>
+    &lt;/ul&gt;
 
-    <article>
+    &lt;/article&gt;
 
-    <a href="#" class="image"><img src="assets/images/pic04.jpg" alt="" ></a>
+    &lt;article&gt;
 
-    <h3>Sed etiam facilis</h3>
+    &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic04.jpg" alt="" &gt;&lt;/a&gt;
 
-    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Sed etiam facilis&lt;/h3&gt;
 
-    <ul class="actions">
+    &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>
+    &lt;/ul&gt;
 
-    <article>
+    &lt;/article&gt;
 
-    <a href="#" class="image"><img src="assets/images/pic05.jpg" alt="" ></a>
+    &lt;article&gt;
 
-    <h3>Feugiat lorem aenean</h3>
+    &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic05.jpg" alt="" &gt;&lt;/a&gt;
 
-    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Feugiat lorem aenean&lt;/h3&gt;
 
-    <ul class="actions">
+    &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>
+    &lt;/ul&gt;
 
-    <article>
+    &lt;/article&gt;
 
-    <a href="#" class="image"><img src="assets/images/pic06.jpg" alt="" ></a>
+    &lt;article&gt;
 
-    <h3>Amet varius aliquam</h3>
+    &lt;a href="#" class="image"&gt;&lt;img src="assets/images/pic06.jpg" alt="" &gt;&lt;/a&gt;
 
-    <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+    &lt;h3&gt;Amet varius aliquam&lt;/h3&gt;
 
-    <ul class="actions">
+    &lt;p&gt;Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.&lt;/p&gt;
 
-    <li><a href="#" class="button">More</a></li>
+    &lt;ul class="actions"&gt;
 
-    </ul>
+    &lt;li&gt;&lt;a href="#" class="button"&gt;More&lt;/a&gt;&lt;/li&gt;
 
-    </article>`
+    &lt;/ul&gt;
+
+    &lt;/article&gt;
