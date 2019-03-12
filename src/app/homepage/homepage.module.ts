@@ -12,7 +12,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
     HomepageRoutingModule,
     MarkdownModule.forChild()
   ],
-  exports: [HomepageComponent],
+  exports: [HomepageComponent, MarkdownModule],
   entryComponents: [HomepageComponent]
 })
 export class HomepageModule { }
