@@ -1,7 +1,7 @@
 ---
 title: Homepage
 ---
-<article>
+`<article>
 
    <a href="#" class="image"><img src="assets/images/pic01.jpg" alt="" ></a>
 
@@ -95,4 +95,4 @@ title: Homepage
 
     </ul>
 
-    </article>
+    </article>`
