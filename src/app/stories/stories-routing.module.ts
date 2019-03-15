@@ -10,7 +10,7 @@ const routes: Routes = [
 
 @NgModule({
     declarations: [StoriesComponent],
-    imports: [RouterModule.forChild(routes),MarkdownModule.forChild()],
+    imports: [RouterModule.forChild(routes), MarkdownModule.forChild()],
     exports: [RouterModule]
 })
 export class StoriesRoutingModule { }
