@@ -5,7 +5,7 @@ import { StoriesComponent } from './stories.component';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 const routes: Routes = [
-    { path: 'posts', component: StoriesComponent, pathMatch: 'full'},
+    { path: 'posts', component: StoriesComponent},
     { path: ':id', component: StoriesComponent, pathMatch: 'full'}
 ];
 
