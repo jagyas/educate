@@ -32,7 +32,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     HomepageModule,
     StoriesRoutingModule,
     RouterModule.forRoot([
-      { path: '', component: HomepageComponent }
+      { path: '', component: HomepageComponent },
+      { path: 'posts', loadChildren: './stories/stories.module#StoriesModule'}
     ]),
     MarkdownModule.forRoot({
       loader: HttpClient, // optional, only if you use [src] attribute
