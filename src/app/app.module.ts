@@ -15,8 +15,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomepageModule } from './homepage/homepage.module';
-import { StoriesRoutingModule } from './stories/stories-routing.module';
-import { HomepageComponent } from './homepage/homepage.component';
+import { HOMEPAGE_ROUTES } from './homepage/homepage.routes';
 
 
 @NgModule({
@@ -30,11 +29,7 @@ import { HomepageComponent } from './homepage/homepage.component';
     BrowserAnimationsModule,
     HttpClientModule,
     HomepageModule,
-    StoriesRoutingModule,
-    RouterModule.forRoot([
-      { path: '', component: HomepageComponent },
-      { path: 'posts', loadChildren: './stories/stories.module#StoriesModule'}
-    ]),
+    RouterModule.forRoot(HOMEPAGE_ROUTES),
     MarkdownModule.forRoot({
       loader: HttpClient, // optional, only if you use [src] attribute
       markedOptions: {

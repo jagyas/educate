@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { MarkdownModule} from 'ngx-markdown';
 
-import { HomepageRoutingModule } from './homepage-routing.module';
 import { HomepageComponent } from './homepage.component';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { StoriesModule } from '../stories/stories.module';
 
 @NgModule({
   declarations: [HomepageComponent],
   imports: [
     CommonModule,
-    HomepageRoutingModule,
+    RouterModule,
+    StoriesModule,
     MarkdownModule.forChild()
   ],
-  exports: [HomepageComponent],
-  entryComponents: [HomepageComponent]
+  exports: [MarkdownModule]
 })
 export class HomepageModule { }

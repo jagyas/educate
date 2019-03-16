@@ -1,4 +1,4 @@
-import { Component, Renderer2, Inject, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, Inject, AfterViewInit } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
@@ -7,13 +7,13 @@ import { DOCUMENT } from '@angular/platform-browser';
   styles: []
 })
 export class HomepageComponent implements AfterViewInit {
-  constructor(private _renderer2: Renderer2, @Inject(DOCUMENT) private _document) { }
+  constructor(@Inject(DOCUMENT) private _document) { }
   async ngAfterViewInit() {
-    await this.loadScript("assets/js/jquery.min.js");
-    await this.loadScript("assets/js/browser.min.js");
-    await this.loadScript("assets/js/breakpoints.min.js");
-    await this.loadScript("assets/js/util.js");
-    await this.loadScript("assets/js/main1.js");
+    await this.loadScript('assets/js/jquery.min.js');
+    await this.loadScript('assets/js/browser.min.js');
+    await this.loadScript('assets/js/breakpoints.min.js');
+    await this.loadScript('assets/js/util.js');
+    await this.loadScript('assets/js/main1.js');
   }
 
   private loadScript(scriptUrl: string) {
