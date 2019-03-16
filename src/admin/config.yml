@@ -6,30 +6,18 @@ backend:
   auth_endpoint: /prod/auth
 site_id: dig2logic.com
 publish_mode: editorial_workflow
-media_folder: "src/assets/images/uploads"
+media_folder: 'src/assets/images/uploads'
 collections:
-  - name: "menus" # Used in routes, e.g., /admin/collections/menus
-    label: "Menus" # Used in the UI
-    label_singular: 'Menu' # Used in the UI, ie: "New Menu"
+  - name: 'menus' # Used in routes, e.g., /admin/collections/menus
+    label: 'Menus' # Used in the UI
+    label_singular: 'Menu' # Used in the UI, ie: 'New Menu'
     description: >
       A collection of Menus.
-    folder: "src/assets/blog/menus" # The path to the folder where the documents are stored
+    folder: 'src/assets/blog/menus' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "hidden", tagname: 'h1' }
-      - {label: "Body", name: "body", widget: "markdown"}
-      
-  - name: "posts" # Used in routes, e.g., /admin/collections/posts
-    label: "Posts" # Used in the UI
-    label_singular: 'Post' # Used in the UI, ie: "New Post"
-    description: >
-      A collection of Posts.
-    folder: "src/assets/blog/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string", tagname: 'h1' }
+      - {label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
       - {
           label: 'Publish Date',
           name: 'date',
@@ -43,16 +31,41 @@ collections:
         widget: 'image'
         required: false
         tagname: ''
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: 'Body', name: 'body', widget: 'markdown'}
+      
+  - name: 'posts' # Used in routes, e.g., /admin/collections/posts
+    label: 'Posts' # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: 'New Post'
+    description: >
+      A collection of Posts.
+    folder: 'src/assets/blog/posts' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - label: 'Cover Image'
+        name: 'image'
+        widget: 'image'
+        required: false
+        tagname: ''
+      - {label: 'Body', name: 'body', widget: 'markdown'}
     meta:
       - { label: 'SEO Description', name: 'description', widget: 'text' }
     
   - name: 'wikis' # Used in routes, ie.: /admin/collections/:slug/edit
     label: 'Wikis' # Used in the UI
-    label_singular: 'Wiki' # Used in the UI, ie: "New Wiki"
+    label_singular: 'Wiki' # Used in the UI, ie: 'New Wiki'
     description: >
       A collection of Wikis.
-    folder: "src/assets/blog/wikis"
+    folder: 'src/assets/blog/wikis'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
