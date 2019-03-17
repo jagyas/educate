@@ -26,6 +26,7 @@
 	            "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
+              "src/404.html",
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -137,6 +138,7 @@
 	            "src/favicon.ico",
               "src/assets",
               "src/manifest.json",
+              "src/404.html",
               {
                 "glob": "**/*",
                 "input": "src/assets",
