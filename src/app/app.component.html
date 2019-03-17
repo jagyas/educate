@@ -36,16 +36,11 @@
                 </header>
                 <ul>
                     <li><a [routerLink]="['']">Homepage</a></li>
-                    <li><a [routerLink]="['posts']">Generic</a></li>
+                    <li><a routerLink="{{postsLink}}">Generic</a></li>
                     <li><a href="elements.html">Elements</a></li>
                     <li>
                         <span class="opener">Submenu</span>
-                        <ul>
-                            <li><a href="#">Lorem Dolor</a></li>
-                            <li><a href="#">Ipsum Adipiscing</a></li>
-                            <li><a href="#">Tempus Magna</a></li>
-                            <li><a href="#">Feugiat Veroeros</a></li>
-                        </ul>
+                        <markdown [src]="'../assets/blog/sidemenu.md'"></markdown>
                     </li>
                     <li><a href="#">Etiam Dolore</a></li>
                     <li><a href="#">Adipiscing</a></li>

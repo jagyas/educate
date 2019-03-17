@@ -3532,6 +3532,10 @@ input, select, textarea {
 				#menu ul a.opener.active + ul, #menu ul span.opener.active + ul {
 					display: block;
 				}
+				
+				#menu ul a.opener.active + markdown , #menu ul span.opener.active + markdown {
+					display: block;
+				}
 
 				#menu ul a.opener.active:before, #menu ul span.opener.active:before {
 					-moz-transform: rotate(-180deg);
@@ -3552,12 +3556,31 @@ input, select, textarea {
 			margin: 0.5em 0 1.5em 0;
 			padding-left: 1em;
 		}
+		
+		#menu > ul > li > markdown {
+			display: none;
+		}
+		
+		#menu > ul > li > markdown > ul {
+			color: #9fa3a6;
+			margin: 0.5em 0 1.5em 0;
+			padding-left: 1em;
+		}
 
 			#menu > ul > li > ul a, #menu > ul > li > ul span {
 				font-size: 0.8em;
 			}
-
+			
+			#menu > ul > li > markdown > ul a, #menu > ul > li > markdown > ul span {
+				font-size: 0.8em;
+			}
+			
 			#menu > ul > li > ul > li {
+				margin: 0.125em 0 0 0;
+				padding: 0.125em 0 0 0;
+			}
+			
+			#menu > ul > li > markdown > ul > li {
 				margin: 0.125em 0 0 0;
 				padding: 0.125em 0 0 0;
 			}
