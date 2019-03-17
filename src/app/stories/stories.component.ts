@@ -15,7 +15,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.post = './assets/blog/post/' +  params['id'] + '.md';
+      this.post = './assets/blog/posts/' +  params['id'] + '.md';
     });
  }
 
