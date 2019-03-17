@@ -5,9 +5,10 @@ import { MarkdownModule} from 'ngx-markdown';
 
 import { HomepageComponent } from './homepage.component';
 import { StoriesModule } from '../stories/stories.module';
+import { NotFoundComponent } from './page-not-found.component';
 
 @NgModule({
-  declarations: [HomepageComponent],
+  declarations: [HomepageComponent, NotFoundComponent],
   imports: [
     CommonModule,
     RouterModule,
