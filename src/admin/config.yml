@@ -7,6 +7,7 @@ backend:
 site_id: dig2logic.com
 publish_mode: editorial_workflow
 media_folder: 'src/assets/images/uploads'
+public_folder: "assets/images/uploads"
 collections:
   - name: 'menus' # Used in routes, e.g., /admin/collections/menus
     label: 'Menus' # Used in the UI
