@@ -25,26 +25,14 @@ collections:
   - name: 'posts' # Used in routes, e.g., /admin/collections/posts
     label: 'Posts' # Used in the UI
     label_singular: 'Post' # Used in the UI, ie: 'New Post'
+    identifier_field: name
     description: >
       A collection of Posts.
     folder: 'src/assets/blog/posts' # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename 
     fields: # The fields for each document, usually in front matter
-      - {label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - label: 'Cover Image'
-        name: 'image'
-        widget: 'image'
-        required: false
-        tagname: ''
-      - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          dateFormat: 'YYYY-MM-DD',
-          timeFormat: 'HH:mm',
-          format: 'YYYY-MM-DD HH:mm',
-        }
+      - {label: 'Name', name: 'name', widget: 'string', tagname: 'h1' }
       - {label: 'Body', name: 'body', widget: 'markdown'}
     meta:
       - { label: 'SEO Description', name: 'description', widget: 'text' }
