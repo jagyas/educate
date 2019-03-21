@@ -17,7 +17,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.post = './assets/blog/posts/' +  params['id1'] + '.md';
+      this.post = '../../assets/blog/posts/' +  params['id1'] + '.md';
     });
     this.markdownService.renderer.heading = (text: string, level: number) => {
       const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
