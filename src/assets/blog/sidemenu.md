@@ -1,3 +1,3 @@
-- [check1](https://dig2logic.com/posts/test)
-- [Node.js](https://dig2logic.com/posts/test2)
-- [Node.js](https://dig2logic.com/posts/test3)
+- [check1](https://dig2logic.com/java/)
+- [Node.js](https://dig2logic.com/java/test2)
+- [Node.js](https://dig2logic.com/java/test3)

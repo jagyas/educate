@@ -1,13 +1,13 @@
 import { Routes } from '@angular/router';
 
 import { HomepageComponent } from './homepage.component';
-import { STORIES_ROUTES } from '../stories/stories.routes';
+// import { CATEGORIES_ROUTES } from '../categories/categories.routes';
 import { homepageRoutesNames } from './homepage.routes.names';
 import { NotFoundComponent } from './page-not-found.component';
 
 export const HOMEPAGE_ROUTES: Routes = [
-    { path: '', component: HomepageComponent },
-    { path: homepageRoutesNames.POSTS, children: STORIES_ROUTES },
-    {path: 'page-not-found', component: NotFoundComponent},
-    {path: '**', redirectTo: 'page-not-found'}
-  ];
+  { path: '', component: HomepageComponent },
+  { path: ':id', loadChildren: '../categories/categories.module#CategoriesModule' },
+  { path: 'page-not-found', component: NotFoundComponent },
+  { path: '**', redirectTo: 'page-not-found' }
+];

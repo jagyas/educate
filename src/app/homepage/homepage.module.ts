@@ -4,7 +4,6 @@ import { RouterModule } from '@angular/router';
 import { MarkdownModule} from 'ngx-markdown';
 
 import { HomepageComponent } from './homepage.component';
-import { StoriesModule } from '../stories/stories.module';
 import { NotFoundComponent } from './page-not-found.component';
 
 @NgModule({
@@ -12,7 +11,6 @@ import { NotFoundComponent } from './page-not-found.component';
   imports: [
     CommonModule,
     RouterModule,
-    StoriesModule,
     MarkdownModule.forChild()
   ],
   exports: [MarkdownModule]

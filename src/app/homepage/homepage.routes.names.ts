@@ -1,3 +1,3 @@
 export const homepageRoutesNames = {
-    POSTS: 'posts'
+    POSTS: 'posts', JAVA: 'java'
   };
