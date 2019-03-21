@@ -7,7 +7,7 @@ import { NotFoundComponent } from './page-not-found.component';
 
 export const HOMEPAGE_ROUTES: Routes = [
   { path: '', component: HomepageComponent },
-  { path: ':id', loadChildren: '../categories/categories.module#CategoriesModule' },
+  { path: ':id', loadChildren: 'app/categories/categories.module#CategoriesModule' },
   { path: 'page-not-found', component: NotFoundComponent },
   { path: '**', redirectTo: 'page-not-found' }
 ];
