@@ -15,7 +15,7 @@
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "compile:server": "tsc -p server.tsconfig.json",
     "generate:prerender": "cd dist && node prerender",
-    "serve:prerender": "cd dist/browser && http-server -a 0.0.0.0 -p 4200",
+    "serve:prerender": "cd dist/browser && http-server -a 0.0.0.0 -p 4300",
     "serve:ssr": "node dist/server"
   },
   "repository": {

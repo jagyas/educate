@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TransferHttpCacheModule } from '@nguniversal/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -16,6 +16,7 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomepageModule } from './homepage/homepage.module';
 import { HOMEPAGE_ROUTES } from './homepage/homepage.routes';
+import { HttpInterceptorService } from './http-interceptor.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { HOMEPAGE_ROUTES } from './homepage/homepage.routes';
   imports: [
     CommonModule,
     BrowserModule,
-    BrowserModule.withServerTransition({appId: 'educate'}),
+    BrowserModule.withServerTransition({ appId: 'educate' }),
     BrowserAnimationsModule,
     HttpClientModule,
     HomepageModule,
@@ -52,7 +53,9 @@ import { HOMEPAGE_ROUTES } from './homepage/homepage.routes';
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   exports: [RouterModule],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
