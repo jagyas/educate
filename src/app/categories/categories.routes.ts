@@ -5,5 +5,5 @@ import { Routes } from '@angular/router';
 
 export const CATEGORIES_ROUTES: Routes = [
   { path: '', component: CategoriesComponent },
-  { path: ':id1', loadChildren: 'app/stories/stories.module#StoriesModule' }
+  //{ path: ':id1', loadChildren: 'app/stories/stories.module#StoriesModule' }
 ];
