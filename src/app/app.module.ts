@@ -33,18 +33,6 @@ import { HttpInterceptorService } from './http-interceptor.service';
     RouterModule.forRoot(HOMEPAGE_ROUTES),
     MarkdownModule.forRoot({
       loader: HttpClient, // optional, only if you use [src] attribute
-      markedOptions: {
-        provide: MarkedOptions,
-        useValue: {
-          gfm: true,
-          tables: true,
-          breaks: false,
-          pedantic: false,
-          sanitize: false,
-          smartLists: true,
-          smartypants: false
-        },
-      },
     }),
     TransferHttpCacheModule,
     MatToolbarModule,
