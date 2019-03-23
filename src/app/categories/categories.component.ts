@@ -17,7 +17,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.post = 'assets/blog/categories/' +  params['id'] + '.md';
+      this.post = params['id'];
     });
     this.markdownService.renderer.heading = (text: string, level: number) => {
       const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
