@@ -1,7 +1,6 @@
 import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 
-import {isPlatformServer} from '@angular/common';
 
 import {Observable} from 'rxjs';
 
@@ -16,7 +15,7 @@ export class HttpInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
       console.log('Platform ID: ' + this.platformId);
       console.log('Request URL: ' + req.url);
-    if (isPlatformServer(this.platformId) && req.url.includes('./')) {
+    if (req.url.includes('./')) {
       return next.handle(req.clone({
         url: `https://dig2logic.com/${req.url.replace('./', '')}`
       }));
