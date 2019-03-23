@@ -140,7 +140,7 @@
               "src/assets",
               "src/manifest.json",
               "src/404.html",
-              "src/**/*.md",
+              "src/assets/blog/posts/test3.md",
               {
                 "glob": "**/*",
                 "input": "src/assets",
