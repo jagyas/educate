@@ -14,9 +14,11 @@ export class HttpInterceptorService implements HttpInterceptor {
   }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+      console.log('Platform ID: ' + this.platformId);
+      console.log('Request URL: ' + req.url);
     if (isPlatformServer(this.platformId) && req.url.includes('./')) {
       return next.handle(req.clone({
-        url: `https://dig2logic.com/${req.url.replace('./', '')}`
+        url: `https://dig2logic.com/${req.url.replace('./', '..../')}`
       }));
     }
 
