@@ -27,6 +27,7 @@
               "src/assets",
               "src/manifest.json",
               "src/404.html",
+              "**/*.md",
               {
                 "glob": "**/*",
                 "input": "src/assets",
@@ -139,6 +140,7 @@
               "src/assets",
               "src/manifest.json",
               "src/404.html",
+              "**/*.md",
               {
                 "glob": "**/*",
                 "input": "src/assets",
