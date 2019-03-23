@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint educate",
     "e2e": "ng e2e",
-    "build:client-and-server-bundles": "ng build --prod --output-hashing all && ng run educate:server:production",
+    "build:client-and-server-bundles": "ng build --prod --output-hashing false && ng run educate:server:production",
     "build:prerender": "npm run build:client-and-server-bundles && npm run compile:server && npm run generate:prerender",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "compile:server": "tsc -p server.tsconfig.json",
