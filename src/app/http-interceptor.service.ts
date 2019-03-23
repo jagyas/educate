@@ -19,9 +19,8 @@ export class HttpInterceptorService implements HttpInterceptor {
       return next.handle(req.clone({
         url: `https://dig2logic.com/${req.url.replace('./', '')}`
       }));
-      console.log('Corrected URL: ' + req.url);
     }
-
+    console.log('Corrected URL: ' + req.url);
     return next.handle(req);
   }
 }
