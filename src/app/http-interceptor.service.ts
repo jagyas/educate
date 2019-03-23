@@ -18,7 +18,7 @@ export class HttpInterceptorService implements HttpInterceptor {
       console.log('Request URL: ' + req.url);
     if (isPlatformServer(this.platformId) && req.url.includes('./')) {
       return next.handle(req.clone({
-        url: `https://dig2logic.com/${req.url.replace('./', '..../')}`
+        url: `https://dig2logic.com/${req.url.replace('./', '')}`
       }));
     }
 
