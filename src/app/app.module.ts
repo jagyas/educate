@@ -32,7 +32,7 @@ import { HttpInterceptorService } from './http-interceptor.service';
     HomepageModule,
     RouterModule.forRoot(HOMEPAGE_ROUTES),
     MarkdownModule.forRoot({
-      loader: HttpClient, // optional, only if you use [src] attribute
+      //loader: HttpClient, // optional, only if you use [src] attribute
       markedOptions: {
         provide: MarkedOptions,
         useValue: {
