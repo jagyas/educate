@@ -17,7 +17,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.post = './assets/blog/posts/' +  params['id1'] + '.md';
+      this.post = 'assets/blog/posts/' +  params['id1'] + '.md';
     });
     this.markdownService.renderer.heading = (text: string, level: number) => {
       const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
@@ -27,7 +27,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
       const escapedText = text.toLowerCase().replace(/[^\w]+/g, '-');
       return '<span class="image main"> <img src="' + href + '" title="' + title + '" alt="' + text + '" /> </span>';
     };
-    this.markdownService.getSource('./assets/blog/posts/test3.md').subscribe(function (data: string) {
+    this.markdownService.getSource('assets/blog/posts/test3.md').subscribe(function (data: string) {
       
       let x = data.split('---').slice(2, 3);
       this.postdata = x[0];
