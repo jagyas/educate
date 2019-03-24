@@ -4,16 +4,14 @@ import { RouterModule } from '@angular/router';
 import { MarkdownModule } from 'ngx-markdown';
 import { CATEGORIES_ROUTES } from './categories.routes';
 import { CategoriesComponent } from './categories.component';
-import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 @NgModule({
   declarations: [CategoriesComponent],
   imports: [
     CommonModule,
-    HttpClientModule,
     RouterModule.forChild(CATEGORIES_ROUTES),
     MarkdownModule.forChild()
   ],
-  exports: [RouterModule]
+  exports: []
 })
 export class CategoriesModule { }

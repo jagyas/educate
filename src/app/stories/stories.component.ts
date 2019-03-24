@@ -13,6 +13,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
  private sub: Subscription;
  post: string;
  postdata: any;
+
  constructor(private route: ActivatedRoute, private markdownService: MarkdownService) { }
 
  ngOnInit() {
@@ -28,15 +29,12 @@ export class StoriesComponent implements OnInit, OnDestroy {
       return '<span class="image main"> <img src="' + href + '" title="' + title + '" alt="' + text + '" /> </span>';
     };
     this.markdownService.getSource('assets/blog/posts/test3.md').subscribe(function (data: string) {
-      
-      let x = data.split('---').slice(2, 3);
+      const x = data.split('---').slice(2, 3);
       this.postdata = x[0];
       console.log('DEBUG: RouteEvent Log area seven' + x[0]);
     }.bind(this), function (errors) {
-
       console.log('DEBUG:E: RouteEvent Log area eight', errors);
       this.postdata = 'Error';
-
     }.bind(this));
  }
 

@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
 
 import { HomepageComponent } from './homepage.component';
-// import { CATEGORIES_ROUTES } from '../categories/categories.routes';
-import { homepageRoutesNames } from './homepage.routes.names';
 import { NotFoundComponent } from './page-not-found.component';
 
 export const HOMEPAGE_ROUTES: Routes = [
