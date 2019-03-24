@@ -12,6 +12,6 @@ import { CategoriesComponent } from './categories.component';
     RouterModule.forChild(CATEGORIES_ROUTES),
     MarkdownModule.forChild()
   ],
-  exports: []
+  exports: [RouterModule]
 })
 export class CategoriesModule { }

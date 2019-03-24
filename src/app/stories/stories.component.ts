@@ -17,10 +17,10 @@ export class StoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.markdownService.getSource('assets/blog/posts/' +  params['id1'] + '.md').subscribe(function (data: string) {
+      this.markdownService.getSource('assets/blog/posts/' +  params['story'] + '.md').subscribe(function (data: string) {
         const x = data.split('---').slice(2, 3);
         this.post = x[0];
-        console.log('DEBUG: RouteEvent Log area seven' + x[0]);
+        console.log('DEBUG: RouteEvent Log area seven' + x);
       }.bind(this), function (errors) {
         console.log('DEBUG:E: RouteEvent Log area eight', errors);
         this.postdata = 'Error';

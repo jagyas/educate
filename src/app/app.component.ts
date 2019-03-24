@@ -1,7 +1,7 @@
 import { Component, Inject, AfterViewInit  } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-import { homepageRoutesNames } from './homepage/homepage.routes.names';
+import { homepageRoutesNames } from './homepage.routes.names';
 
 @Component({
   selector: 'app-educator',

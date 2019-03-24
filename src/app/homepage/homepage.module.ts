@@ -13,6 +13,6 @@ import { NotFoundComponent } from './page-not-found.component';
     RouterModule,
     MarkdownModule.forChild()
   ],
-  exports: [MarkdownModule]
+  exports: []
 })
 export class HomepageModule { }

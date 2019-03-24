@@ -16,7 +16,7 @@ export class CategoriesComponent implements OnInit, OnDestroy {
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
-      this.markdownService.getSource('assets/blog/categories/' + params['id'] + '.md').subscribe(function (data: string) {
+      this.markdownService.getSource('assets/blog/categories/' + params['category'] + '.md').subscribe(function (data: string) {
         const x = data.split('---').slice(2, 3);
         this.post = x[0];
       }.bind(this), function (errors) {

@@ -15,8 +15,8 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { HomepageModule } from './homepage/homepage.module';
-import { HOMEPAGE_ROUTES } from './homepage/homepage.routes';
 import { HttpInterceptorService } from './http-interceptor.service';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { HttpInterceptorService } from './http-interceptor.service';
     BrowserAnimationsModule,
     HttpClientModule,
     HomepageModule,
-    RouterModule.forRoot(HOMEPAGE_ROUTES),
+    AppRoutingModule,
     MarkdownModule.forRoot({
       loader: HttpClient, // optional, only if you use [src] attribute
       markedOptions: {
