@@ -11,7 +11,7 @@ import { MarkdownService } from 'ngx-markdown';
 export class CategoriesComponent implements OnInit, OnDestroy {
 
  private sub: Subscription;
- private category: string;
+ category: string;
  constructor(private route: ActivatedRoute, private markdownService: MarkdownService) { }
 
  ngOnInit() {

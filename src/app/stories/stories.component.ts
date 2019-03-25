@@ -11,7 +11,7 @@ import { MarkdownService } from 'ngx-markdown';
 export class StoriesComponent implements OnInit, OnDestroy {
 
  private sub: Subscription;
- private post: string;
+ post: string;
 
  constructor(private route: ActivatedRoute, private markdownService: MarkdownService) { }
 
