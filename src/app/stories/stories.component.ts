@@ -23,7 +23,7 @@ export class StoriesComponent implements OnInit, OnDestroy {
         console.log('DEBUG: RouteEvent Log area seven' + x);
       }.bind(this), function (errors) {
         console.log('DEBUG:E: RouteEvent Log area eight', errors);
-        this.postdata = 'Error';
+        this.post = 'Error';
       }.bind(this));
     });
     this.markdownService.renderer.heading = (text: string, level: number) => {

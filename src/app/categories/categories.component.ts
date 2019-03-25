@@ -11,17 +11,17 @@ import { MarkdownService } from 'ngx-markdown';
 export class CategoriesComponent implements OnInit, OnDestroy {
 
  private sub: Subscription;
- private post: string;
+ private category: string;
  constructor(private route: ActivatedRoute, private markdownService: MarkdownService) { }
 
  ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.markdownService.getSource('assets/blog/categories/' + params['category'] + '.md').subscribe(function (data: string) {
         const x = data.split('---').slice(2, 3);
-        this.post = x[0];
+        this.category = x[0];
       }.bind(this), function (errors) {
         console.log('DEBUG:E: RouteEvent Log area eight', errors);
-        this.postdata = 'Error';
+        this.category = 'Error';
       }.bind(this));
     });
     this.markdownService.renderer.heading = (text: string, level: number) => {
