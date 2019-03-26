@@ -29,6 +29,9 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+header
+	{ margin: 0 0 2em 0;}
+
 body {
 	line-height: 1;
 }
@@ -2088,7 +2091,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 0 0 3em 0;
+			margin: 0 0 1.5em 0;
 			width: 100%;
 		}
 
