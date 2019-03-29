@@ -1,3 +1,3 @@
-- [check1](https://fervent-booth-474ce2.netlify.com/java/)
-- [Node.js](https://fervent-booth-474ce2.netlify.com/java/test2)
-- [Node.js](https://fervent-booth-474ce2.netlify.com/java/test3)
+- [check1](https://dig2logic.com/java/)
+- [Node.js](https://dig2logic.com/java/test2)
+- [Node.js](https://dig2logic.com/java/test3)
