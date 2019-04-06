@@ -6,7 +6,7 @@ cache:
   - node_modules
 install:
     - yarn install
-    - yarn run build:prerender
+    - ng build --prod
 script: echo "npm test temporarily disabled"
 after_success: |
     cd dist/browser
