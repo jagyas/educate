@@ -6,7 +6,7 @@ cache:
   - node_modules
 install:
     - yarn install
-    - ng build --prod
+    - ng build --prod --base-href dig2logic.com
 script: echo "npm test temporarily disabled"
 after_success: |
     cd dist/browser
